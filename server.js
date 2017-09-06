@@ -1,31 +1,43 @@
-const express = require('express');
+const express = require("express");;
+const expressValidator = require("express-validator");
 const bodyParser = require('body-parser');
-const models = require("./models");
 const mustacheExpress = require('mustache-express');
-const expressValidator = require('express-validator');
-const session = require('express-session');
-// const routes = require('./routes.js');
-const sessionConfig = require('./sessionConfig');
-const path = require("path")
-// const utils = require('./utils.js')
-
-const app = express();
+const session = require("express-session");
+const sessionConfig = require("./sessionConfig")
 const port = process.env.PORT || 8080;
+const models = require("./models");
+const indexRouter = require('./routes/indexRoutes');
+const loginRouter = require('./routes/loginRoutes');
+const logoutRouter = require('./routes/logoutRoutes');
+const signupRouter = require('./routes/signupRoutes');
+const likesRouter = require('./routes/likesRoutes');
+const postsRouter = require('./routes/postsRoutes');
+// const mygabsRouter = require('./routes/mygabsRoutes');
+const app = express();
 
+// RENDER ENGINE
+app.engine("mustache", mustacheExpress());
+app.set("views", "./views");
+app.set("view engine", "mustache")
 
-//viewengine
-app.engine('mustache', mustacheExpress());
-app.set('views', './views');
-app.set('view engine', 'mustache');
-
-//middleware
-app.use(express.static('./public'));
+//MIDDLEWARE
+app.use(express.static('public'));
+app.use(express.static("views"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(expressValidator());
-// app.use(routes);
 app.use(session(sessionConfig));
 
+// ROUTES
+app.use('/', indexRouter);
+app.use('/home', indexRouter);
+app.use('/login', loginRouter);
+app.use('/logout', logoutRouter);
+app.use('/signup', signupRouter);
+app.use('/likes', likesRouter);
+app.use('/posts', postsRouter);
+
+// LISTENER
 app.listen(port, function () {
-    console.log(`Server is running on port ${port}`);
+    console.log('Server is running on port: ', port);
 });
