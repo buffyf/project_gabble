@@ -8,8 +8,8 @@ postsRouter.get("/", shared.checkAuth, function (req, res) {
 });
 
 postsRouter.post("/", function (req, res) {
-    if (!req.body || !req.body.newMessage) {
-        res.redirect("/");
+    if (!req.body || !req.body.newmessage) {
+        res.redirect("/posts");
     }
 
     var newMessage = models.post.build({
