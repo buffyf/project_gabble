@@ -26,18 +26,19 @@
     <h1 class="header">Gabble</h1>
     <div class="wrapper-myposts">
         {{#posts}}
-        <div class="">
-            <p>{{createdAt}}</p>
-            <span class="username"><strong>{{user.username}}</strong>: </span><br>
-            <div class="">
-                <div class="message">{{message}}</div>
+        <div class="center-section">
+            <div>
+                <p>{{createdAt}}</p>
+                <span class="username"><strong>{{user.username}}</strong>: </span><br>
+                <div class="">
+                    <div class="message">{{message}}</div>
+                </div>
+
+                <br>
+                <h3>Liked by</h3>
+                <p>{{#likes}} {{user.username}}</p>
+                <br> {{/likes}}
             </div>
-
-            <br>
-            <h3>Liked by</h3>
-            {{#likes}} {{user.username}}
-            <br> {{/likes}}
-
         </div>
         {{/posts}}
     </div>
