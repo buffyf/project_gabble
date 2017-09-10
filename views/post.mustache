@@ -5,29 +5,37 @@
     <title>Create New Post</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Fjalla+One|Open+Sans+Condensed:300" rel="stylesheet">
     <link href="main.css" rel="stylesheet">
 </head>
 
-<body>
+<body class="site-background">
+
+
+
     <nav>
-        <ul id="menu">
-            <li class="menuItem"><a href="/">Gabble</a></li>
-            <li class="menuItem">Create a new Post</li>
-            <li class="menuItem"><a href="/myposts">View my posts</a></li>
-            <li class="menuItem">Logged in as {{user.username}}</li>
-            <li class="menuItem"><a href="logout">Log out</a></li>
-        </ul>
+        <div class="nav-row">
+            <ul class="nav">
+                <li class="active" id="home"><a class="link" href="/">Home</a></li>
+                <li>Create Post</li>
+                <li><a class="link" href="/myposts">My Posts</a></li>
+                <li><a class="link" href="logout">Sign Out</a></li>
+                <li>Logged in as {{user.username}}</li>
+            </ul>
+        </div>
     </nav>
-    <div id="wrapper-create">
-        <h1>Create a New Post</h1>
-        <br>
-        <form action="/posts" method="post">
-            <textarea name="newmessage" id="newmessage" maxlength="140" cols="50" rows="3"></textarea>
-            <br>
-            <input type="submit" name="savemessage" value="Save post">
+    <h1 class="header">Gabble</h1>
+    <div class="wrapper-signup">
+        <form class="signup-form" action="/posts" method="post">
+            <div class="talkbubble">
+                <h1 class="newPost">Create a New Post</h1>
+                <textarea name="newmessage" maxlength="140"></textarea>
+            </div>
+            <button class="new-post-button" type="submit" name="savemessage" value="Save post">Post</button>
         </form>
+
     </div>
+
 </body>
 
 </html>

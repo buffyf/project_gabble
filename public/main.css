@@ -1,0 +1,378 @@
+                                /* font-family: 'Chewy', cursive;
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Open Sans Condensed', sans-serif; */
+                                
+                                body {
+                                    margin: auto 0;
+                                    font-family: 'Open Sans Condensed', sans-serif;
+                                }
+                                
+                                @-webkit-keyframes move-to-right {
+                                    from {
+                                        left: -200px;
+                                    }
+                                    to {
+                                        left: 100%;
+                                    }
+                                }
+                                
+                                @keyframes move-to-right {
+                                    from {
+                                        left: -200px;
+                                    }
+                                    to {
+                                        left: 100%;
+                                    }
+                                }
+                                
+                                @-webkit-keyframes move-to-left {
+                                    from {
+                                        right: -200px;
+                                    }
+                                    to {
+                                        right: 100%;
+                                    }
+                                }
+                                
+                                @keyframes move-to-left {
+                                    from {
+                                        right: -200px;
+                                    }
+                                    to {
+                                        right: 100%;
+                                    }
+                                }
+                                
+                                @-webkit-keyframes sombra-sol {
+                                    0% {
+                                        -webkit-box-shadow: -5px -5px -5px -5px #d3d204;
+                                        box-shadow: -5px -5px -5px -5px #d3d204;
+                                    }
+                                    50% {
+                                        -webkit-box-shadow: -1px 1px 20px 9px #d3d204;
+                                        box-shadow: -1px 1px 20px 9px #d3d204;
+                                    }
+                                    100% {
+                                        -webkit-box-shadow: -5px -5px -5px -5px #d3d204;
+                                        box-shadow: -5px -5px -5px -5px #d3d204;
+                                    }
+                                }
+                                
+                                @keyframes sombra-sol {
+                                    0% {
+                                        -webkit-box-shadow: -5px -5px -5px -5px #d3d204;
+                                        box-shadow: -5px -5px -5px -5px #d3d204;
+                                    }
+                                    50% {
+                                        -webkit-box-shadow: -1px 1px 20px 9px #d3d204;
+                                        box-shadow: -1px 1px 20px 9px #d3d204;
+                                    }
+                                    100% {
+                                        -webkit-box-shadow: -5px -5px -5px -5px #d3d204;
+                                        box-shadow: -5px -5px -5px -5px #d3d204;
+                                    }
+                                }
+                                
+                                .ceu {
+                                    width: 100vw;
+                                    height: 100vh;
+                                    display: block;
+                                    margin: 0 auto;
+                                    position: relative;
+                                    overflow: hidden;
+                                    background-color: skyblue;
+                                }
+                                
+                                img {
+                                    width: 340px;
+                                    position: absolute;
+                                }
+                                
+                                #nuvem-1 {
+                                    top: 5%;
+                                    left: -200px;
+                                    z-index: 2;
+                                    -webkit-animation: move-to-right 70s infinite;
+                                    animation: move-to-right 70s infinite;
+                                    -webkit-animation-timing-function: linear;
+                                    animation-timing-function: linear;
+                                    -webkit-animation-delay: 0s;
+                                    animation-delay: 0s;
+                                    -webkit-animation-direction: alternate-reverse;
+                                    animation-direction: alternate-reverse;
+                                }
+                                
+                                #nuvem-2 {
+                                    top: 25%;
+                                    right: -200px;
+                                    z-index: 2;
+                                    -webkit-animation: move-to-left 60s infinite;
+                                    animation: move-to-left 60s infinite;
+                                    -webkit-animation-timing-function: linear;
+                                    animation-timing-function: linear;
+                                    -webkit-animation-delay: 1s;
+                                    animation-delay: 1s;
+                                    -webkit-animation-direction: alternate-reverse;
+                                    animation-direction: alternate-reverse;
+                                }
+                                
+                                #nuvem-3 {
+                                    top: 47%;
+                                    left: -200px;
+                                    z-index: 2;
+                                    -webkit-animation: move-to-right 50s infinite;
+                                    animation: move-to-right 50s infinite;
+                                    -webkit-animation-timing-function: linear;
+                                    animation-timing-function: linear;
+                                    -webkit-animation-delay: 1.5s;
+                                    animation-delay: 1.5s;
+                                    -webkit-animation-direction: alternate-reverse;
+                                    animation-direction: alternate-reverse;
+                                }
+                                
+                                #nuvem-4 {
+                                    top: 70%;
+                                    right: -200px;
+                                    z-index: 2;
+                                    -webkit-animation: move-to-left 60s infinite;
+                                    animation: move-to-left 60s infinite;
+                                    -webkit-animation-timing-function: linear;
+                                    animation-timing-function: linear;
+                                    -webkit-animation-delay: 0s;
+                                    animation-delay: 0s;
+                                    -webkit-animation-direction: alternate-reverse;
+                                    animation-direction: alternate-reverse;
+                                }
+                                
+                                .sol {
+                                    width: 800px;
+                                    height: 800px;
+                                    border-radius: 50%;
+                                    background-color: #f1f24e;
+                                    position: absolute;
+                                    top: 16.5%;
+                                    right: 20%;
+                                    -webkit-animation: sombra-sol 8s infinite;
+                                    animation: sombra-sol 8s infinite;
+                                    -webkit-animation-timing-function: linear;
+                                    animation-timing-function: linear;
+                                    -webkit-animation-delay: 0s;
+                                    animation-delay: 0s;
+                                }
+                                /* Sign Up */
+                                
+                                .header {
+                                    font-family: 'Chewy', cursive;
+                                    text-align: center;
+                                    margin-top: 2px;
+                                    font-size: 4rem;
+                                    color: white;
+                                    text-shadow: 2px 2px 4px slateblue;
+                                    z-index: 4;
+                                }
+                                
+                                .su-header {
+                                    text-shadow: 2px 2px 4px white;
+                                }
+                                
+                                .wrapper-signup {
+                                    display: flex;
+                                    justify-content: center;
+                                }
+                                
+                                .signup-form {
+                                    z-index: 4;
+                                    color: gray;
+                                    text-align: center;
+                                    margin-top: 1rem;
+                                }
+                                
+                                input {
+                                    font-family: 'Open Sans Condensed', sans-serif;
+                                    background-color: transparent;
+                                    border: 0;
+                                    border-bottom: 2px solid slateblue;
+                                    color: gray;
+                                    font-size: 28px;
+                                    outline: 0;
+                                    padding: 5px 20px;
+                                    text-align: center;
+                                    transition: all 0.3s;
+                                    width: 200px;
+                                }
+                                
+                                input:focus {
+                                    max-width: 100%;
+                                    width: 400px;
+                                }
+                                
+                                button {
+                                    background-color: #87ceeb;
+                                    border: 2px solid white;
+                                    border-radius: 27px;
+                                    color: white;
+                                    cursor: pointer;
+                                    font-size: 20px;
+                                    margin-top: 20px;
+                                    padding: 15px 30px;
+                                    text-transform: uppercase;
+                                    transition: all 200ms;
+                                }
+                                
+                                button:hover, button:focus {
+                                    background-color: white;
+                                    color: #87ceeb;
+                                    outline: 0;
+                                }
+                                /* POSTS */
+                                
+                                .site-background {
+                                    background: linear-gradient(135deg, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+                                    background-size: 100%;
+                                    background-repeat: no-repeat;
+                                }
+                                
+                                .new-post-button {
+                                    margin-bottom: 200px;
+                                    margin-top: 0;
+                                }
+                                
+                                .newPost {
+                                    margin-top: -40px;
+                                    margin-bottom: 0;
+                                    padding-top: 4.2rem;
+                                    padding-right: 20px;
+                                }
+                                
+                                .talkbubble {
+                                    width: 533px;
+                                    height: 450px;
+                                    background-image: url(thoughtBubble.png);
+                                    background-size: cover;
+                                    background-repeat: no-repeat;
+                                }
+                                
+                                textarea {
+                                    margin-top: -1px;
+                                    width: 265px;
+                                    height: 200px;
+                                    font-size: 1.5rem;
+                                    font-family: 'Open Sans Condensed', sans-serif;
+                                    border-radius: 10px;
+                                }
+                                /* MY POSTS */
+                                
+                                .wrapper-myposts {
+                                    margin: 0 0 100px 20px;
+                                }
+                                
+                                .message {
+                                    width: 400px;
+                                    height: 200px;
+                                    border: 1px solid gray;
+                                    padding: 10px;
+                                    background: white;
+                                    font-size: 1.5rem;
+                                    border-radius: 10px;
+                                    box-shadow: 2px 2px 2px gray;
+                                }
+                                
+                                .btn-delete {
+                                    font-family: 'Open Sans Condensed', sans-serif;
+                                    background-color: #87ceeb;
+                                    border: 2px solid white;
+                                    border-radius: 27px;
+                                    color: white;
+                                    cursor: pointer;
+                                    font-size: 15px;
+                                    margin-top: -15px;
+                                    margin-left: 288px;
+                                    padding: 5px 12px;
+                                    text-transform: uppercase;
+                                    transition: all 200ms;
+                                }
+                                
+                                .btn-like {
+                                    font-family: 'Open Sans Condensed', sans-serif;
+                                    background-color: #87ceeb;
+                                    border: 2px solid white;
+                                    border-radius: 27px;
+                                    color: white;
+                                    cursor: pointer;
+                                    font-size: 15px;
+                                    /* margin-top: -15px; */
+                                    padding: 5px 12px;
+                                    text-transform: uppercase;
+                                    text-decoration: none;
+                                    transition: all 200ms;
+                                }
+                                
+                                .btn-like:hover, .btn-like:focus {
+                                    background-color: white;
+                                    color: #87ceeb;
+                                    outline: 0;
+                                }
+                                
+                                .username {
+                                    font-size: 1.5rem;
+                                    color: yellow;
+                                    text-shadow: 2px 2px 4px gray;
+                                }
+                                /* NAV BAR */
+                                
+                                ul {
+                                    display: flex;
+                                    justify-content: space-around;
+                                    list-style-type: none;
+                                    background: linear-gradient(135deg, #87e0fd 0%, #53cbf1 40%, #05abe0 100%);
+                                    margin: 1em;
+                                    padding: .25em 0 0 0;
+                                    height: 3em;
+                                    overflow: hidden;
+                                    box-shadow: .05em .05em 1em 0;
+                                }
+                                
+                                li {
+                                    position: relative;
+                                    color: white;
+                                    padding: 0.40em;
+                                    font-size: 1.5em;
+                                    cursor: pointer;
+                                    z-index: 2;
+                                }
+                                
+                                li:before {
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    bottom: .01em;
+                                    width: 100%;
+                                    height: 2em;
+                                    margin-left: -.4em;
+                                    border-radius: .25em .25em 0 0;
+                                    z-index: -1;
+                                }
+                                
+                                li:hover:before {
+                                    background: gray;
+                                    bottom: .01em;
+                                    animation: splash .3s ease;
+                                }
+                                
+                                .link {
+                                    text-decoration: none;
+                                }
+                                
+                                @keyframes splash {
+                                    0% {
+                                        bottom: -2em;
+                                        border-radius: 100%;
+                                    }
+                                    100% {
+                                        bottom: .01em;
+                                    }
+                                }
+                                
+                                .nav-row {
+                                    margin: 0;
+                                }

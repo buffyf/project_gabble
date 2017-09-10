@@ -5,31 +5,39 @@
     <title>Likes</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Fjalla+One|Open+Sans+Condensed:300" rel="stylesheet">
+
 </head>
 
-<body>
+<body class="site-background">
     <nav>
-        <ul id="menu">
-            <li class="menuItem"><a href="/">Gabble</a></li>
-            <li class="menuItem"><a href="/posts">Create a new post</a></li>
-            <li class="menuItem"><a href="/myposts">View my posts</a></li>
-            <li class="menuItem">Logged in as {{user.username}}</li>
-            <li class="menuItem"><a href="/logout">Log out</a></li>
-        </ul>
+        <div class="nav-row">
+            <ul class="nav">
+                <li class="active" id="home"><a class="link" href="/">Home</a></li>
+                <li><a class="link" href="/posts">Create Post</a></li>
+
+                <li><a class="link" href="/myposts">My Posts</a></li>
+                <li><a class="link" href="logout">Sign Out</a></li>
+                <li>Logged in as {{user.username}}</li>
+            </ul>
+        </div>
     </nav>
-    <div id="wrapper-likes">
+    <h1 class="header">Gabble</h1>
+    <div class="wrapper-myposts">
         {{#posts}}
-        <div class="message">
-            <p>
-                <strong>{{user.username}}</strong>: {{message}}
-                <br><br> {{createdAt}}
-                <br>
-                <h1>Liked by</h1>
-                {{#likes}} {{user.username}}
-                <br> {{/likes}}
-            </p>
+        <div class="">
+            <p>{{createdAt}}</p>
+            <span class="username"><strong>{{user.username}}</strong>: </span><br>
+            <div class="">
+                <div class="message">{{message}}</div>
+            </div>
+
+            <br>
+            <h3>Liked by</h3>
+            {{#likes}} {{user.username}}
+            <br> {{/likes}}
+
         </div>
         {{/posts}}
     </div>

@@ -5,37 +5,45 @@
     <title>My Gabs</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link href="/main.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Chewy|Fjalla+One|Open+Sans+Condensed:300" rel="stylesheet">
+
 </head>
 
-<body>
-    <nav class="nav-bar">
-        <ul id="menu">
-            <li class="menuItem"><a href="/">Gabble</a></li>
-            <li class="menuItem">My Posts</li>
-            <li class="menuItem"><a href="/posts">Create a new post</a></li>
-            <li class="menuItem">Logged in as {{user.username}}</li>
-            <li class="menuItem"><a href="/logout">Log out</a></li>
-        </ul>
+<body class="site-background">
+    <nav>
+        <div class="nav-row">
+            <ul class="nav">
+                <li class="active" id="home"><a class="link" href="/">Home</a></li>
+                <li><a class="link" href="/posts">Create Post</a></li>
+
+                <li><a class="link" href="/myposts">My Posts</a></li>
+                <li><a class="link" href="logout">Sign Out</a></li>
+                <li>Logged in as {{user.username}}</li>
+            </ul>
+        </div>
     </nav>
-    <div id="wrapper-homepage">
+    <div class="wrapper-myposts">
+        <h1 class="header">Gabble</h1>
         <h1>My Posts</h1>
         {{#posts}}
-        <div class="message">
-            <p>
-                <form action="/myposts/{{id}}" method="post">
-                    <div class="line-1">
-                        <span><strong>{{user.username}}</strong>: </span>
-                        <span class="middle">{{message}}</span>
-                        <input type="submit" class="btn-like" value="Delete">
+        <div class="">
+
+            <form action="/myposts/{{id}}" method="post">
+                <div class="line-1">
+                    <p>{{createdAt}}</p>
+                    <span class="username"><strong>{{user.username}}</strong>: </span><br>
+                    <div class="">
+                        <div class="message">{{message}}</div>
                     </div>
-                </form>
-                {{createdAt}}
+                </div>
                 <br> {{#likes.length}}
-                <a href="/likes/{{id}}">{{likes.length}} likes</a> {{/likes.length}} {{^likes.length}} No likes yet. {{/likes.length}}
-                <br>
-            </p>
+                <a class="btn-like" href="/likes/{{id}}">{{likes.length}} likes</a> {{/likes.length}} {{^likes.length}} No
+                likes yet. {{/likes.length}}
+                <button type="submit" class="btn-delete" value="Delete">Delete</button>
+            </form>
+            <br>
+
         </div>
         <br> {{/posts}}
     </div>
