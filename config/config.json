@@ -1,9 +1,10 @@
 {
   "development": {
-    "username": "barbarafeinstein",
-    "password": "",
+    "username": "buffyafeinstein1",
+    "password": "quesocheese",
     "database": "gabble",
-    "host": "127.0.0.1",
+    "host": "gabble.c7q4f0dncozj.us-east-2.rds.amazonaws.com",
+    "port": 5432,
     "dialect": "postgres"
   },
   "test": {
